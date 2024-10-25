@@ -2,6 +2,7 @@ export default function Button({
   text,
   color = "blue",
   fontSize = 12,
+  itemID = -1,
   handleClick,
 }) {
   const buttonStyle = {
@@ -10,7 +11,7 @@ export default function Button({
   };
 
   return (
-    <button onClick={handleClick} style={buttonStyle}>
+    <button onClick={handleClick} style={buttonStyle} itemID={itemID}>
       {text}
     </button>
   );

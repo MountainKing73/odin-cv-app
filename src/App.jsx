@@ -4,6 +4,8 @@ import PersonalInfoForm from "./components/PersonalInfoForm";
 import PersonalInfo from "./components/PersonalInfo";
 import EducationForm from "./components/EducationForm";
 import Education from "./components/Education";
+import ExperienceForm from "./components/ExperienceForm";
+import Experience from "./components/Experience";
 
 function App() {
   const [resume, setResume] = useState({
@@ -27,6 +29,24 @@ function App() {
         id: crypto.randomUUID(),
       },
     ],
+    experience: [
+      {
+        company: "Company A",
+        title: "My job",
+        startDate: "01/01/2020",
+        endDate: "03/05/2023",
+        responsibilities: "Did some stuff",
+        id: crypto.randomUUID(),
+      },
+      {
+        company: "Company B",
+        title: "A better job",
+        startDate: "04/01/2023",
+        endDate: "Present",
+        responsibilities: "Did some different stuff",
+        id: crypto.randomUUID(),
+      },
+    ],
   });
 
   const updateInfo = (info) => {
@@ -35,6 +55,10 @@ function App() {
 
   const updateEducation = (education) => {
     setResume({ ...resume, education: education });
+  };
+
+  const updateExperience = (experience) => {
+    setResume({ ...resume, experience: experience });
   };
 
   return (
@@ -46,6 +70,11 @@ function App() {
         updateCallback={updateEducation}
       />
       <Education education={resume.education} />
+      <ExperienceForm
+        currExperience={resume.experience}
+        updateCallback={updateExperience}
+      />
+      <Experience experience={resume.experience} />
     </StrictMode>
   );
 }

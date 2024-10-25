@@ -25,7 +25,7 @@ export default function PersonalInfoForm({ currInfo, updateCallback }) {
   };
 
   return (
-    <div className="infoForm">
+    <div className="InfoForm">
       <Input
         label="Name"
         id="name"

@@ -21,7 +21,6 @@ export default function EducationForm({ currEducation, updateCallback }) {
     const { id, value } = e.target;
     const newList = [...education];
     const entry = newList.find((a) => a.id === e.target.getAttribute("itemid"));
-    console.log("name: " + id);
     switch (id) {
       case "school":
         entry.school = value;
@@ -61,9 +60,9 @@ export default function EducationForm({ currEducation, updateCallback }) {
   };
 
   return (
-    <div>
+    <div className="EducationForm">
       {education.map((entry) => (
-        <div key={entry.id} className="educationForm">
+        <div key={entry.id}>
           <Input
             label="School"
             id="school"

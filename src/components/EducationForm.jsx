@@ -30,6 +30,7 @@ export default function EducationForm({ currEducation, updateCallback }) {
         break;
       case "date":
         entry.date = value;
+        break;
     }
     setEducation(newList);
   };
@@ -62,7 +63,7 @@ export default function EducationForm({ currEducation, updateCallback }) {
   return (
     <div className="EducationForm">
       {education.map((entry) => (
-        <div key={entry.id}>
+        <div className="FormItem" key={entry.id}>
           <Input
             label="School"
             id="school"

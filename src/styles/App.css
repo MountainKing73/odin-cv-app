@@ -1,0 +1,59 @@
+#root {
+  height: 100vh;
+  max-width: 1280px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+}
+
+#EntryContainer {
+  background-color: lightgray;
+  width: 40%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.InfoForm {
+  border: 1px solid;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+input {
+  width: 200px;
+}
+
+.EducationForm {
+  border: 1px solid;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.FormItem {
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.ExperienceForm {
+  border: 1px solid;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#DisplayContainer {
+  background-color: yellow;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

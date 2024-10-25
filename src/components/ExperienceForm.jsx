@@ -73,7 +73,7 @@ export default function ExperienceForm({ currExperience, updateCallback }) {
   return (
     <div className="ExperienceForm">
       {experience.map((entry) => (
-        <div key={entry.id}>
+        <div className="FormItem" key={entry.id}>
           <Input
             label="Company"
             id="company"

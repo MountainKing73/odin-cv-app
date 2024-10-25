@@ -1,5 +1,5 @@
 import { StrictMode, useState } from "react";
-import "./App.css";
+import "./styles/App.css";
 import PersonalInfoForm from "./components/PersonalInfoForm";
 import PersonalInfo from "./components/PersonalInfo";
 import EducationForm from "./components/EducationForm";
@@ -63,18 +63,22 @@ function App() {
 
   return (
     <StrictMode>
-      <PersonalInfoForm currInfo={resume.info} updateCallback={updateInfo} />
-      <PersonalInfo info={resume.info} />
-      <EducationForm
-        currEducation={resume.education}
-        updateCallback={updateEducation}
-      />
-      <Education education={resume.education} />
-      <ExperienceForm
-        currExperience={resume.experience}
-        updateCallback={updateExperience}
-      />
-      <Experience experience={resume.experience} />
+      <div id="EntryContainer">
+        <PersonalInfoForm currInfo={resume.info} updateCallback={updateInfo} />
+        <EducationForm
+          currEducation={resume.education}
+          updateCallback={updateEducation}
+        />
+        <ExperienceForm
+          currExperience={resume.experience}
+          updateCallback={updateExperience}
+        />
+      </div>
+      <div id="DisplayContainer">
+        <PersonalInfo info={resume.info} />
+        <Education education={resume.education} />
+        <Experience experience={resume.experience} />
+      </div>
     </StrictMode>
   );
 }
